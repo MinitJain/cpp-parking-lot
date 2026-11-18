@@ -16,7 +16,21 @@ public:
     const std::string& id() const { return id_; }
     VehicleType type() const { return type_; }
 
+
 private:
     std::string id_;
     VehicleType type_;
 };
+
+
+class ParkingSession {
+public:
+ParkingSession(std::string sessionId, std::string vehicleId)
+: sessionId_(sessionId), vehicleId_(vehicleId) {}
+const std::string& vehicleId() const { return vehicleId_; }
+
+private:
+std::string sessionId_;
+std::string vehicleId_;
+};
+
